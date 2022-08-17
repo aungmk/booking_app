@@ -1,3 +1,4 @@
+import 'package:booking_app/resource/dimens.dart';
 import 'package:booking_app/widget/gradient_view.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,9 @@ class BannerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   return Padding(
-      padding: const EdgeInsets.only(left: 22.0,right: 22.0),
+      padding: const EdgeInsets.only(
+          left: MARGIN_LARGE,
+          right: MARGIN_LARGE),
         child: Container(
           child: Stack (
             children: [
@@ -29,7 +32,9 @@ class BannerIconView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 18,bottom: 15),
+      padding: const EdgeInsets.only(
+          left: MARGIN_MEDIUM,
+          bottom: MARGIN_CARD_MALL),
       child: Align(
         alignment: Alignment.bottomLeft,
         child: Image.asset("assets/images/UPI_Credit-Card.jpg"),
@@ -46,7 +51,9 @@ class BannerTextTitleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 18.0,top: 16.0),
+      padding: const EdgeInsets.only(
+          left: MARGIN_MEDIUM,
+          top: MARGIN_SMALL),
       child: Align(
         alignment: Alignment.topLeft,
         child: Image.asset("assets/images/textkbz.jpg"),

@@ -23,13 +23,13 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.only(
             left: 37,
           ),
-          child: Image.asset("assets/images/Vector.jpg"),
+          child: Image.asset("assets/images/Vectorlocation.png"),
         ),
         actions: [
           Icon(Icons.search, size: 22, color: Colors.white),
           SizedBox(width: 20),
           Icon(Icons.add_alert_sharp, size: 18, color: Colors.white),
-          Image.asset("assets/images/Vector.jpg")
+          Image.asset("assets/images/Vectorscan.png")
         ],
       ),
       body: SingleChildScrollView(
@@ -48,10 +48,28 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.0),
-              GrideView()
+              GrideView(),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: PRIMARY_COLOR,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+        ],
+
       ),
     );
   }
