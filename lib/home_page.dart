@@ -54,19 +54,33 @@ class HomePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: PRIMARY_COLOR,
+
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: ImageIcon(
+                AssetImage("assets/images/Vectorplay_botnavi.png"),
+            ),
+            label: 'Movies',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: ImageIcon(
+              AssetImage("assets/images/icons8-movie-theater-50.png"),
+            ),
+            label: 'Cinemas',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: ImageIcon(
+              AssetImage("assets/images/Vectorticket.png"),
+            ),
+            label: 'Tickets',
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(
+              AssetImage("assets/images/profileicon.png"),
+            ),
+            label: 'Profile',
           ),
         ],
 
