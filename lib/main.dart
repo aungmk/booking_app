@@ -1,5 +1,7 @@
 import 'package:booking_app/comingsoon_page.dart';
+import 'package:booking_app/comingsoon_search_page.dart';
 import 'package:booking_app/home_page.dart';
+import 'package:booking_app/home_search_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,8 +28,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      ///home: HomePage(),
-      home: ComingSoonPage(),
+      //home: HomeSearchPage(),
+      //home: HomePage(),
+      //home: ComingSoonPage(),
+      home: ComingSearchPage(),
     );
   }
 }

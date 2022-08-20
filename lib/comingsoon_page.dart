@@ -1,7 +1,9 @@
 import 'package:booking_app/resource/color.dart';
-import 'package:booking_app/viewitem/banner_vew.dart';
+import 'package:booking_app/viewitem/banner_view.dart';
+import 'package:booking_app/widget/banner_section_view.dart';
 import 'package:booking_app/widget/bottombar_view.dart';
 import 'package:booking_app/widget/gridcoming_view.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -38,17 +40,8 @@ class ComingSoonPage extends StatelessWidget {
           color: PRIMARY_COLOR,
           child: Column(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height / 4,
-                child: PageView(
-                  children: [
-                    BannerView(),
-                    BannerView(),
-                    BannerView(),
-                  ],
-                ),
-              ),
-              SizedBox(height: 20.0),
+              BannerSectionView(),
+              SizedBox(height: 30.0),
               GridComingView(),
             ],
           ),
@@ -59,4 +52,45 @@ class ComingSoonPage extends StatelessWidget {
   }
 }
 
+class BannerSectionView extends StatefulWidget {
 
+
+  @override
+  State<BannerSectionView> createState() => _BannerSectionViewState();
+}
+
+class _BannerSectionViewState extends State<BannerSectionView> {
+  double _position=0;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: MediaQuery.of(context).size.height / 4,
+          child: PageView(
+            onPageChanged: (page){
+              setState(() {
+                _position=page.toDouble();
+              });
+            },
+            children: [
+              BannerView(),
+              BannerView(),
+              BannerView(),
+            ],
+          ),
+        ),
+        SizedBox(height: 17.0),
+
+        DotsIndicator(
+          dotsCount: 4,
+          position: _position,
+          decorator: DotsDecorator(
+              color: DOT_INACTIVE_COLOR,
+              activeColor: SELECTED_BOT_COLOR
+          ),
+        ),
+      ],
+    );
+  }
+}

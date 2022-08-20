@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GridHomeView extends StatelessWidget {
+  //final int gridcount;
+
+
+  //GridHomeView (this.gridcount);
   const GridHomeView({
     Key? key,
   }) : super(key: key);
