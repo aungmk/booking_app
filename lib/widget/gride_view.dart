@@ -1,8 +1,9 @@
+import 'package:booking_app/widget/gradientvertical_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class GrideView extends StatelessWidget {
-  const GrideView({
+class GridHomeView extends StatelessWidget {
+  const GridHomeView({
     Key? key,
   }) : super(key: key);
 
@@ -28,12 +29,14 @@ class GrideView extends StatelessWidget {
           return Container(
             child: Stack(
               children:[
-              Positioned.fill(
-                child: Image.asset("assets/images/Movie.png"),
+                Container(
+                  height: 212.0,
+                  child: Positioned.fill(
+                  child: Image.asset("assets/images/Movie.png",
+                          fit: BoxFit.cover),
+                  ),
                 ),
-                Positioned.fill(
-                    child: Image.asset("assets/images/Gradient.png"),
-                ),
+                GradientVerticalView(),
                 Padding(
                   padding: const EdgeInsets.only(
                       left: 7,

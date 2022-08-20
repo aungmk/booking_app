@@ -1,11 +1,11 @@
 import 'package:booking_app/resource/color.dart';
 import 'package:booking_app/viewitem/banner_vew.dart';
 import 'package:booking_app/widget/bottombar_view.dart';
-import 'package:booking_app/widget/gride_view.dart';
+import 'package:booking_app/widget/gridcoming_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class ComingSoonPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.0),
-              GrideView(),
+              GridComingView(),
             ],
           ),
         ),
