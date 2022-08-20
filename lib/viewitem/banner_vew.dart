@@ -37,7 +37,7 @@ class BannerIconView extends StatelessWidget {
           bottom: MARGIN_CARD_MALL),
       child: Align(
         alignment: Alignment.bottomLeft,
-        child: Image.asset("assets/images/UPI_Credit-Card.jpg"),
+        child: Image.asset("assets/images/UPI_img.png"),
       ),
     );
   }
@@ -56,7 +56,7 @@ class BannerTextTitleView extends StatelessWidget {
           top: MARGIN_SMALL),
       child: Align(
         alignment: Alignment.topLeft,
-        child: Image.asset("assets/images/textkbz.jpg"),
+        child: Image.asset("assets/images/10%_text.png"),
       ),
     );
   }

@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-
+  int _currentTapIndex=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +56,8 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: PRIMARY_COLOR,
+        unselectedItemColor: UNSELECTED_BOT_COLOR,
+        selectedItemColor: SELECTED_BOT_COLOR,
 
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -66,7 +68,7 @@ class HomePage extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
-              AssetImage("assets/images/icons8-movie-theater-50.png"),
+              AssetImage("assets/images/cinemaicon.png"),
             ),
             label: 'Cinemas',
           ),
@@ -83,7 +85,6 @@ class HomePage extends StatelessWidget {
             label: 'Profile',
           ),
         ],
-
       ),
     );
   }
