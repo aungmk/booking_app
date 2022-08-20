@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  int _currentTapIndex=0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
