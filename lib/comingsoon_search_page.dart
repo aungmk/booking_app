@@ -1,4 +1,5 @@
 import 'package:booking_app/resource/color.dart';
+import 'package:booking_app/viewitem/banner_view.dart';
 import 'package:booking_app/viewitem/gridcome_search_view.dart';
 import 'package:booking_app/viewitem/gridhome_search_view.dart';
 import 'package:booking_app/widget/gridhome_view.dart';
@@ -56,6 +57,87 @@ class ComingSearchPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 22,top: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 27,
+                      width: 81.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text("Genres",
+                              style: TextStyle(color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Positioned.fill(child: Image.asset("assets/images/Vectordownarrow.png"))
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      height: 27,
+                      width: 81.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text("Format",
+                              style: TextStyle(color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Positioned.fill(child: Image.asset("assets/images/Vectordownarrow.png"))
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      height: 27,
+                      width: 81.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text("Month",
+                              style: TextStyle(color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Positioned.fill(child: Image.asset("assets/images/Vectordownarrow.png"))
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
               GridComingSearchView(),
               SizedBox(height: 448),
             ],

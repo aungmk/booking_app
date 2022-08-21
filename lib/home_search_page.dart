@@ -55,6 +55,62 @@ class HomeSearchPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 22,top: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 27,
+                      width: 81.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text("Genres",
+                              style: TextStyle(color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Positioned.fill(child: Image.asset("assets/images/Vectordownarrow.png"))
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      height: 27,
+                      width: 81.5,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Text("Format",
+                              style: TextStyle(color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Positioned.fill(child: Image.asset("assets/images/Vectordownarrow.png"))
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               GridHomeSearchView(),
               SizedBox(height: 448),
             ],
