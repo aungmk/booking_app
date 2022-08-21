@@ -42,6 +42,58 @@ class HomePage extends StatelessWidget {
             children: [
               BannerSectionView(),
               SizedBox(height: 30.0),
+              Container(
+                height: 55,
+                width: 370,
+                decoration: BoxDecoration(
+                  color: PRIMARY_COLOR,
+                  borderRadius: BorderRadius.circular(5.0)
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(left: 8),
+                      height: 40,
+                      width: 177,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4)
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Now Showing',
+                        ),
+                        style: TextButton.styleFrom(
+                            primary: Colors.black,
+                            backgroundColor: SELECTED_BOT_COLOR,
+                            textStyle:
+                            const TextStyle(fontSize: 16)),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Container(
+                      padding: EdgeInsets.only(left: 8),
+                      height: 40,
+                      width: 177,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4)
+                      ),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'Now Showing',
+                        ),
+                        style: TextButton.styleFrom(
+                            primary: Colors.black,
+                            backgroundColor: SELECTED_BOT_COLOR,
+                            textStyle:
+                            const TextStyle(fontSize: 16)),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 30.0),
               GridHomeView(),
             ],
           ),

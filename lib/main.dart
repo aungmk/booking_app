@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomeSearchPage(),
-      //home: HomePage(),
+      //home: HomeSearchPage(),
+      home: HomePage(),
       //home: ComingSoonPage(),
       //home: ComingSearchPage(),
     );

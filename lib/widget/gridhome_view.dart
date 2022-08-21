@@ -30,73 +30,84 @@ class GridHomeView extends StatelessWidget {
         ),
         itemCount: 6,
         itemBuilder: (context, index) {
-          return Container(
-            child: Stack(
-              children:[
-                Container(
-                  height: 212.0,
-                  child: Positioned.fill(
-                  child: Image.asset("assets/images/Movie.png",
-                          fit: BoxFit.cover),
+          return NowShowingImage();
+        }
+      ),
+    );
+  }
+}
+
+class NowShowingImage extends StatelessWidget {
+  const NowShowingImage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Stack(
+        children:[
+          Container(
+            height: 212.0,
+            child: Positioned.fill(
+            child: Image.asset("assets/images/Movie.png",
+                    fit: BoxFit.cover),
+            ),
+          ),
+          GradientVerticalView(),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 7,
+                bottom: 24,
+                right: 7
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                 Row(
+                  children: [
+                    Text("Venom II",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w500
+                    ),
+                    ),
+                    Spacer(),
+                    Image.asset("assets/images/IMDB.png")
+                  ]
                   ),
-                ),
-                GradientVerticalView(),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 7,
-                      bottom: 24,
-                      right: 7
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                       Row(
-                        children: [
-                          Text("Venom II",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w500
-                          ),
-                          ),
-                          Spacer(),
-                          Image.asset("assets/images/IMDB.png")
-                        ]
-                        ),
-                      SizedBox(height: 12.88),
-                      Row(
-                        children: [
-                          Text("U/A",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.w600
-                          ),
-                          ),
-                          SizedBox(width: 8),
-                          Icon(
-                            Icons.add_circle_rounded,
-                            color: Colors.white,
-                            size: 5.0,
-                          ),
-                          SizedBox(width: 10),
-                          Text("2D,3D,3D IMAX",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12.0,
-                                fontWeight: FontWeight.w600
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                SizedBox(height: 12.88),
+                Row(
+                  children: [
+                    Text("U/A",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w600
+                    ),
+                    ),
+                    SizedBox(width: 8),
+                    Icon(
+                      Icons.add_circle_rounded,
+                      color: Colors.white,
+                      size: 5.0,
+                    ),
+                    SizedBox(width: 10),
+                    Text("2D,3D,3D IMAX",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.w600
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
-          );
-        }
+          )
+        ],
       ),
     );
   }
